@@ -9,15 +9,19 @@ app.set('view engine', 'ejs');
 app.use(express.static('./public'));
 
 // controllers
-const {getAdminPage} = require("./controllers/adminPage")
+const {getAdminPage} = require("./controllers/adminPage");
 const {getAdminInfos} = require("./controllers/adminInfosPage");
 const {getArticles} = require("./controllers/articlesPage");
+const {getAteliers} = require("./controllers/ateliersPage");
+const {getComments} = require("./controllers/commentsPage");
 
 // routes
 
 app.get('/admin', getAdminPage);
 app.get('/admin/infos', getAdminInfos);
 app.get('/admin/articles', getArticles);
+app.get('/admin/ateliers', getAteliers);
+app.get('/admin/comments', getComments);
 
 
 app.listen(port, () => {
