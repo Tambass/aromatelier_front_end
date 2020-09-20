@@ -1,0 +1,79 @@
+<%- include('../partials/admin_partials/admin_header')-%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Ajouter une prestation</h2>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <form>
+
+                <div class="form-group">
+                    <label for="title">Titre:</label>
+                    <input type="text" class="form-control" id="title" name="title"
+                        placeholder="Titre de la prestation">
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Contenu:</label>
+                    <textarea class="form-control" id="content" rows="3" name="content"
+                        placeholder=" Contenu de la prestation"></textarea>
+                </div>
+
+                <div class="form-row align-items-center">
+
+                    <div class="col-sm-3 my-1">
+                        <label class="sr-only" for="inlineFormInputGroupUsername">Prix</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">€</div>
+                            </div>
+                            <input type="text" class="form-control" id="inlineFormInputGroupUsername"
+                                placeholder="Prix">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3 my-1">
+                        <input type="file" class="form-control-file" id="image" name="image">
+                    </div>
+
+                </div>
+
+                <div class="form-row align-items-center">
+
+                    <div class="col-sm-3 my-1 input-group">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="category">Catégorie</label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Choisir...</option>
+                            <option value="1">Thérapies</option>
+                            <option value="2">Naturopathie</option>
+                            <option value="3">Bilan Dermo</option>
+                        </select>
+                    </div>
+
+                    <div class="col-sm-3 my-1">
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="status">
+                            <label class="form-check-label" for="status">Status (cocher si actif)</label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Ajouter</button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/admin_partials/admin_footer')-%>

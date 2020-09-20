@@ -11,7 +11,7 @@ app.use(express.static('./public'));
 // ------CONTROLLERS------
 const {getAdminPage} = require("./controllers/admin_controllers/adminPage");
 const {getAdminInfos, getEditInfosPage} = require("./controllers/admin_controllers/adminInfosPage");
-const {getArticles} = require("./controllers/admin_controllers/articlesPage");
+const {getArticles, getAddArticle} = require("./controllers/admin_controllers/articlesPage");
 const {getAteliers} = require("./controllers/admin_controllers/ateliersPage");
 const {getComments} = require("./controllers/admin_controllers/commentsPage");
 
@@ -26,6 +26,7 @@ app.get('/admin/infos/edit_infos', getEditInfosPage);
 
 // Page des prestations
 app.get('/admin/articles', getArticles);
+app.get('/admin/articles/add', getAddArticle);
 
 // Page des ateliers
 app.get('/admin/ateliers', getAteliers);
