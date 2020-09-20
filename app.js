@@ -10,7 +10,7 @@ app.use(express.static('./public'));
 
 // controllers
 const {getAdminPage} = require("./controllers/adminPage");
-const {getAdminInfos} = require("./controllers/adminInfosPage");
+const {getAdminInfos, getEditInfosPage} = require("./controllers/adminInfosPage");
 const {getArticles} = require("./controllers/articlesPage");
 const {getAteliers} = require("./controllers/ateliersPage");
 const {getComments} = require("./controllers/commentsPage");
@@ -19,6 +19,7 @@ const {getComments} = require("./controllers/commentsPage");
 
 app.get('/admin', getAdminPage);
 app.get('/admin/infos', getAdminInfos);
+app.get('/admin/infos/edit_infos', getEditInfosPage);
 app.get('/admin/articles', getArticles);
 app.get('/admin/ateliers', getAteliers);
 app.get('/admin/comments', getComments);
