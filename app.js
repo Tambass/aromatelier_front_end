@@ -8,21 +8,32 @@ app.set('view engine', 'ejs');
 //setup public folder
 app.use(express.static('./public'));
 
-// controllers
-const {getAdminPage} = require("./controllers/adminPage");
-const {getAdminInfos, getEditInfosPage} = require("./controllers/adminInfosPage");
-const {getArticles} = require("./controllers/articlesPage");
-const {getAteliers} = require("./controllers/ateliersPage");
-const {getComments} = require("./controllers/commentsPage");
+// ------CONTROLLERS------
+const {getAdminPage} = require("./controllers/admin_controllers/adminPage");
+const {getAdminInfos, getEditInfosPage} = require("./controllers/admin_controllers/adminInfosPage");
+const {getArticles} = require("./controllers/admin_controllers/articlesPage");
+const {getAteliers} = require("./controllers/admin_controllers/ateliersPage");
+const {getComments} = require("./controllers/admin_controllers/commentsPage");
 
-// routes
+// ------ROUTES------
 
+// Page d'accueil de l'administration
 app.get('/admin', getAdminPage);
+
+// Page des informations de l'administrateur
 app.get('/admin/infos', getAdminInfos);
 app.get('/admin/infos/edit_infos', getEditInfosPage);
+
+// Page des prestations
 app.get('/admin/articles', getArticles);
+
+// Page des ateliers
 app.get('/admin/ateliers', getAteliers);
+
+// Page des commentaires
 app.get('/admin/comments', getComments);
+
+// Page des inscrits
 
 
 app.listen(port, () => {
