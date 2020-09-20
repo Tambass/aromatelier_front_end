@@ -8314,6 +8314,7 @@
   #content {
     width: 100%;
     padding: 0;
+    background-color: #eaecee;
     min-height: 100vh;
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
